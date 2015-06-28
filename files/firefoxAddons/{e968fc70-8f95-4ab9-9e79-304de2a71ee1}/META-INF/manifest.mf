@@ -1,0 +1,27 @@
+Manifest-Version: 1.0
+
+Name: install.rdf
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: UwvqJKYh1k9Uf7CgcJjSDw==
+SHA1-Digest: G/rgxB8+0RH4iPFZvSy8nRKaYcs=
+
+Name: chrome.manifest
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: UM6tD8DlQZCcBe8+Ry2/IA==
+SHA1-Digest: zIkeBu0liFgDiFg9G07bZNELhrI=
+
+Name: install.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: A8GO6XQ/dvyLvBvkh1o8rg==
+SHA1-Digest: o4I8x4AfQcl2POovQJ+Fhgy9vYA=
+
+Name: chrome/useragentswitcher.jar
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: WjNPMbwMsQ6eK2dQgYG7LA==
+SHA1-Digest: cekARV6TRbX1/7kwZtUTpjqHgBY=
+
+Name: license.txt
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: T+hp7ph6NAGY+w1UxVxH8Q==
+SHA1-Digest: Hee6y0+717bTkaaav+F0wlCewwM=
+

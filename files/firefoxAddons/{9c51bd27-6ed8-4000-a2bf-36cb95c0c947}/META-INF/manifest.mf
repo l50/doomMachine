@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+
+Name: install.rdf
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: iwKliiABT9ukCKNz2WQn0g==
+SHA1-Digest: drsP+bleMw23UvGlOit//brY6QU=
+
+Name: chrome.manifest
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: k/RfiRDOIC8A8ROPJ7Je3w==
+SHA1-Digest: i4OkZW0B+byGUyFj4fHRoXqCGMs=
+
+Name: tamperdata.jar
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: Z3v4IhFFV1N/G717Gc9dSg==
+SHA1-Digest: v5TgYciXwSpBowQW2V7aWTWMQx8=
+
+Name: defaults/preferences/tamperdata.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: hlhLbHD3sXCnNsY9icWUIQ==
+SHA1-Digest: sMRzeHgTn+fkJZ6Sa4yLz/k++Hg=
+
