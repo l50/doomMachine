@@ -31,9 +31,10 @@ Be sure to install VirtualBox and Vagrant, these are important!
 2. cd wherever you installed it/doomMachine
 3. Build the box by typing: vagrant up
 4. Wait for everything to install (you can monitor this by watching the terminal window)
-5. Pwn things
-6. Offload all the data you want to save
-7. Destroy the box by typing: vagrant destroy -f
+5. Change the password for the vagrant user as well as the root user. 
+6. Pwn things
+7. Offload all the data you want to save
+8. Destroy the box by typing: vagrant destroy -f
 
 ##Additional Information
 ###Veil:
@@ -42,8 +43,13 @@ Run veil-evasion and be sure to update if required - WINE = automation not happe
 ###Firefox Addons:
 Be sure to go in and enable them. They are disabled by default.
 
+###You got an Oh no! Something has gone wrong after typing "vagrant up"
+Don't worry about it, click Log Out and log back in. Be sure to "sudo -s"
+
 ### Something Missing?
 Let me know: jayson.e.grace@gmail.com
+
+
 
 Resources
 ---
