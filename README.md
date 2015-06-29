@@ -29,12 +29,13 @@ Be sure to install VirtualBox and Vagrant, these are important!
 ##Usage
 1. git clone this repo: git clone git://github.com/l50/doomMachine.git
 2. cd wherever you installed it/doomMachine
-3. Build the box by typing: vagrant up
-4. Wait for everything to install (you can monitor this by watching the terminal window)
-5. Change the password for the vagrant user as well as the root user. 
-6. Pwn things
-7. Offload all the data you want to save
-8. Destroy the box by typing: vagrant destroy -f
+3. Open the Vagrant file and change this line: config.vm.network "public_network", bridge: 'en0: Wi-Fi (AirPort)' to reflect your network interface.
+4. Build the box by typing: vagrant up
+5. Wait for everything to install (you can monitor this by watching the terminal window)
+6. Change the password for the vagrant user as well as the root user. 
+7. Pwn things
+8. Offload all the data you want to save
+9. Destroy the box by typing: vagrant destroy -f
 
 ##Additional Information
 ###Veil:

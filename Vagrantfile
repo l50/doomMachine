@@ -1,6 +1,5 @@
 Vagrant.configure("2") do |config|
-  config.vm.box = "/Users/l/programs/vagrant_boxes/packer-kali/Kali_virtualbox_2015-06-07T06:53:38Z.box"
-
+  config.vm.box = "l50/doomMachine"
   config.vm.define :doomMachine do |doomMachine|
     doomMachine.vm.hostname = 'doomMachine'
     config.vm.network "public_network", bridge: 'en0: Wi-Fi (AirPort)'
