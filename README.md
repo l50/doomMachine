@@ -1,4 +1,8 @@
-# Doom Machine
+Doom Machine
+============
+
+[![License](http://img.shields.io/:license-mit-blue.svg)](http://doge.mit-license.org)
+
 This is a penetration testing box that will be integrated into AndroPuppet (https://github.com/l50/AndroPuppet) as a module. It can also be used on its own.
 
 ## Included Tools
@@ -64,8 +68,3 @@ Vagrant - https://github.com/mitchellh/vagrant
 Kali Linux - https://www.kali.org/
 
 Docker - https://www.docker.com/
-
-License
-----
-
-Apache
