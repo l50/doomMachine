@@ -11,6 +11,7 @@ This is a penetration testing box that will be integrated into AndroPuppet (http
 * PeepingTom
 * Discover
 * SMBMap
+* SMBExec
 * Powersploit
 * Banner-plus NSE Script
 * Veil
