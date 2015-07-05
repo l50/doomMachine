@@ -21,61 +21,6 @@ node 'doomMachine'
 
   Exec["apt-update"] -> Package <| |>
 
-  exec { "apt-upgrade":
-    command => "/usr/bin/apt-get upgrade -y",
-    require => [
-      Exec['apt-update'],
-    ],
-  }
-
-  exec { "dist-upgrade":
-    command => "/usr/bin/apt-get dist-upgrade -y",
-    require => [
-      Exec['apt-upgrade'],
-    ],
-  }
-
-# Install SMBExec - Hopefully will be replaced soon with a docker solution
-  vcsrepo { '/opt/smbexec':
-    ensure   => present,
-    provider => git,
-    source   => 'git://github.com/pentestgeek/smbexec.git',
-    require  => Class['git'],
-  }
-
-  exec { 'bundle_install_smbexec':
-    command => 'bundle install',
-    cwd     => '/opt/smbexec',
-    path    => '/usr/bin',
-    require => [
-      Vcsrepo['/opt/smbexec'],
-    ],
-  }
-
-  file { '/opt/smbexec/install.sh':
-    ensure  => present,
-    owner   => root,
-    group   => root,
-    mode    => 0755,
-    source  => "/vagrant/files/smbexec/install.sh",
-    require => [
-      Vcsrepo['/opt/smbexec'],
-      Exec['bundle_install_smbexec'],
-    ],
-  }
-
-#  exec { 'install_smb_exec':
-#    command     => '/opt/smbexec/install.sh',
-#  #    timeout     => 0,
-#    path        => ['/usr/bin', '/bin'],
-#    provider    => 'shell',
-#    require     => [
-#      Vcsrepo['/opt/smbexec'],
-#      Exec['bundle_install_smbexec'],
-#      File['/opt/smbexec/install.sh']
-#    ],
-#  }
-
 # Install Discover
   vcsrepo { '/opt/discover':
     ensure   => present,
@@ -169,20 +114,6 @@ node 'doomMachine'
     ],
   }
 
-# Install Veil
-  vcsrepo { '/opt/Veil-Evasion':
-    ensure   => present,
-    provider => git,
-    source   => 'git://github.com/Veil-Framework/Veil-Evasion.git',
-    require  => Class['git'],
-    before   => Exec['install_veil']
-  }
-
-  exec { 'install_veil':
-    command  => '/opt/Veil-Evasion/setup/setup.sh',
-    provider => 'shell',
-  }
-
 # Install phishingfrenzy
   exec { 'install_docker':
     command => 'curl -sSL https://get.docker.io/ubuntu/ | sudo sh',
@@ -208,11 +139,29 @@ node 'doomMachine'
   }
 
   exec { 'start_phishing_frenzy':
-    command => 'docker run -d -p 80:80 b00stfr3ak/ubuntu-phishingfrenzy',
+    command => 'docker run --restart=always -d -p 80:80 b00stfr3ak/ubuntu-phishingfrenzy',
     path    => ['/usr/bin/', '/bin'],
     require => [
       Exec['install_docker'],
       Exec['install_phishing_frenzy'],
+    ]
+  }
+
+# Install smbexec
+  exec { 'install_smbexec':
+    command => 'docker pull l505/smbexec',
+    path    => ['/usr/bin/', '/bin'],
+    require => [
+      Exec['install_docker'],
+    ]
+  }
+
+  file_line { 'smbexec_shortcut':
+    path => '/root/.bashrc',
+    line => 'alias smbexec="docker run --restart=always -t -i l505/smbexec /opt/smbexec/smbexec.rb"',
+    require => [
+      Exec['install_docker'],
+      Exec['install_smbexec'],
     ]
   }
 

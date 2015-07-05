@@ -16,7 +16,6 @@ Vagrant.configure("2") do |config|
     end
   end
 
-
   config.vm.provision :shell do |shell|
     # Install puppet on doomMachine
     shell.inline = "sudo gem install puppet --version 3.6.2 --no-ri --no-rdoc;"
