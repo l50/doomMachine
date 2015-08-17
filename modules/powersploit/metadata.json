@@ -1,0 +1,14 @@
+{
+  "name": "l50-powersploit",
+  "version": "0.1.0",
+  "author": "l50",
+  "summary": "Install Powersploit post-exploitation tool",
+  "license": "MIT",
+  "source": "https://github.com/l50/puppet-powersploit",
+  "project_page": "https://github.com/l50/puppet-powersploit",
+  "issues_url": "https://github.com/l50/puppet-powersploit",
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
+  ]
+}
+
