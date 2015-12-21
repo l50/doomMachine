@@ -32,6 +32,18 @@ This is a penetration testing box that will be integrated into [AndroPuppet](htt
 4. Download and install Ruby. Preferably 2.x and up, which you can do easily with rvm (https://rvm.io/).
 Be sure to install VirtualBox and Vagrant, these are important!
 
+##Ruby Install
+1. To install ruby, start by installing rvm. To do this, run the following commands:
+```bash    
+gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0
+\curl -sSL https://get.rvm.io | bash -s stable
+source $HOME/.rvm/scripts/rvm
+```
+2. Next install ruby using rvm:
+```bash
+rvm install ruby
+```
+
 ##Usage
 1. git clone this repo: ```git clone git://github.com/l50/doomMachine.git```
 2. cd wherever you installed it/doomMachine
