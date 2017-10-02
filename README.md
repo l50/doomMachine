@@ -1,7 +1,7 @@
 Doom Machine
 ============
 
-[![License](http://img.shields.io/:license-mit-blue.svg)](http://doge.mit-license.org)
+[![License](http://img.shields.io/:license-mit-blue.svg)](https://github.com/l50/doomMachine/blob/master/LICENSE)
 
 This is a penetration testing box that will be integrated into [AndroPuppet](https://github.com/l50/AndroPuppet) as a module. It can also be used on its own.
 
@@ -25,14 +25,14 @@ This is a penetration testing box that will be integrated into [AndroPuppet](htt
 * FoxyProxy Add-on (Firefox)
 * User Agent Switcher Add-on (Firefox)
 
-##Installation Instructions
+### Installation Instructions
 1. Download vagrant from here: http://www.vagrantup.com/downloads.html
 2. To install on a debian-based platform, use ```dpkg -i```
 3. Download and install VirtualBox from here: https://www.virtualbox.org/wiki/Downloads
 4. Download and install Ruby. Preferably 2.x and up, which you can do easily with rvm (https://rvm.io/).
 Be sure to install VirtualBox and Vagrant, these are important!
 
-##Ruby Install
+### Ruby Install
 1. To install ruby, start by installing rvm. To do this, run the following commands:
 ```bash    
 gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0
@@ -44,7 +44,7 @@ source $HOME/.rvm/scripts/rvm
 rvm install ruby
 ```
 
-##Usage
+## Usage
 1. git clone this repo: ```git clone git://github.com/l50/doomMachine.git```
 2. cd wherever you installed it/doomMachine
 3. Run ```bash install.sh```
@@ -57,17 +57,19 @@ rvm install ruby
 9. Offload all the data you want to save
 10. Destroy the box by typing: ```vagrant destroy -f```
 
-##Additional Information
-###Veil:
+## Additional Information
+### Veil:
 Run veil-evasion and be sure to update if required. WINE = automation not happening.
 
-###Firefox Addons:
+### Firefox Addons:
 Be sure to go in and enable them. They are disabled by default.
 
-###You got an Oh no! Something has gone wrong after typing "vagrant up"
+## FAQ
+
+### You got an Oh no! Something has gone wrong after typing "vagrant up"
 Don't worry about it, click Log Out and log back in. Be sure to ```sudo -s```
 
-### Something Missing?
+## Something Missing?
 Let me know: jayson.e.grace@gmail.com
 
 Resources
@@ -80,4 +82,3 @@ Vagrant - https://github.com/mitchellh/vagrant
 Kali Linux - https://www.kali.org/
 
 Docker - https://www.docker.com/
-
